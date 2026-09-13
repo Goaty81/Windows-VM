@@ -32,22 +32,30 @@ Services this service depends on:
 
  - Fax
 
+<img width="1023" height="778" alt="image" src="https://github.com/user-attachments/assets/dfd2326a-7094-4cda-a8ad-9c187033e5eb" />
+
 Services that depend on this service:
 
 - Remote Procedure Call
 - Hyper Text Transfer Protocol (HTTP)
 
+<img width="1023" height="780" alt="image" src="https://github.com/user-attachments/assets/a3d4f5e9-5509-459e-8ada-7e91f5df24c5" />
+
 Verification
 
 Get-Service <ServiceName>
 
+<img width="1022" height="817" alt="image" src="https://github.com/user-attachments/assets/4e5fb1aa-1165-4cbf-bc7e-655919f61554" />
+
 Result:
+
+The service is running and ready to use
 
 4. Break / Fault Introduced
 
 What did I change?
 
-Example: Stopped a required dependency service.
+I stopped a service from running preventing its operations and operations of those reliant on it.
 
 Command/action used:
 
