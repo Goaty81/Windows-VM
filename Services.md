@@ -67,7 +67,7 @@ CanPauseAndContinue : False
 
 <img width="1023" height="779" alt="image" src="https://github.com/user-attachments/assets/ea18a4b2-5c73-4443-9dd9-7d50e0e8b533" />
 
-4. Break / Fault Introduced
+<ins>4. Break / Fault Introduced</ins>
 
 What did I change?
 
@@ -83,7 +83,7 @@ Expected impact:
 
 By stopping this service i expected that the windows OS will be prevented from carrying out printer services
 
-5. Symptoms
+<ins>5. Symptoms</ins>
 
 - Printer services stop running
 - OS unable to print
@@ -101,7 +101,7 @@ Observed service status:
 
 Result:
 
-6. Investigation
+<ins>6. Investigation</ins>
 
 Step 1 — Check service status
 
@@ -139,7 +139,7 @@ Relevant event/error:
 
 <img width="1023" height="817" alt="image" src="https://github.com/user-attachments/assets/5440d623-f008-4a66-a9cf-47d71f2fdd37" />
 
-7. Root Cause
+<ins>7. Root Cause</ins>
 
 What caused the failure?
 
@@ -152,7 +152,7 @@ Evidence supporting the conclusion:
 
 <img width="1025" height="781" alt="image" src="https://github.com/user-attachments/assets/5f6fa5b6-6a71-46a5-87cf-5dfe84b8bcaa" />
 
-8. Fix
+<ins>8. Fix</ins>
 
 Action taken:
 
@@ -166,7 +166,7 @@ Why this fixes the problem:
 
 This will Reboot the Service and will allow the OS to begin normal printer operations.
 
-9. Verification
+<ins>9. Verification</ins>
 
 Service status after repair:
 
@@ -176,14 +176,14 @@ Result:
 
 Printer Operations back up and running on the OS.
 
-10. Final State
+<ins>10. Final State</ins>
 
 Service status: Running
 Startup type: Automatic
 Dependencies healthy: Yes
 Functionality restored: Yes
 
-11. Lessons Learned
+<ins>11. Lessons Learned</ins>
 
 What did I learn?
 
