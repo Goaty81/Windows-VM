@@ -1,6 +1,6 @@
 Here i will be troubleshooting services through the windows VM!
 
-1. Lab Information
+<ins>1. Lab Information</ins>
 
 Date: 07.09.26
 
@@ -10,11 +10,11 @@ Windows Version: Windows 10 Pro
 
 Service: Printer Spooler
 
-2. Objective
+<ins>2. Objective</ins>
 
 To understand the service dependencies and troubleshoot the services that fail to start.
 
-3. Initial State
+<ins>3. Initial State</ins>
 
 Service name: Spooler
 
@@ -43,7 +43,7 @@ Services that depend on this service:
 
 Verification
 
-Get-Service <ServiceName> | Format *
+Get-Service <ServiceName> | Format-List *
 
 <img width="1023" height="779" alt="image" src="https://github.com/user-attachments/assets/c0ded5f1-530d-49f3-85ce-c49c118edf5f" />
 
