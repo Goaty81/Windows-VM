@@ -34,10 +34,12 @@ Services this service depends on:
 
 Services that depend on this service:
 
-- RPC
-- 
+- Remote Procedure Call
+- Hyper Text Transfer Protocol (HTTP)
+
 Verification
-Get-Service <ServiceName> | Format-List *
+
+Get-Service <ServiceName>
 
 Result:
 
