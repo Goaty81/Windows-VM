@@ -12,8 +12,6 @@ Service: Printer Spooler
 
 2. Objective
 
-What am I trying to learn or demonstrate?
-
 To understand the service dependencies and troubleshoot the services that fail to start.
 
 3. Initial State
