@@ -22,7 +22,7 @@ Display name: Print Spooler
 
 Current status: Running
 
-Startup type: Manual
+Startup type: Automatic
 
 Log On As: Local System
 
@@ -43,13 +43,29 @@ Services that depend on this service:
 
 Verification
 
-Get-Service <ServiceName>
+Get-Service <ServiceName> | Format *
 
-<img width="1022" height="817" alt="image" src="https://github.com/user-attachments/assets/4e5fb1aa-1165-4cbf-bc7e-655919f61554" />
+<img width="1023" height="779" alt="image" src="https://github.com/user-attachments/assets/c0ded5f1-530d-49f3-85ce-c49c118edf5f" />
 
 Result:
 
-The service is running and ready to use
+Name : Spooler 
+
+DisplayName : Print Spooler 
+
+Status : Running 
+
+StartType : Automatic 
+
+ServicesDependedOn : {RPCSS} {HTTP}
+
+DependentServices : {FAX} 
+
+CanStop : True 
+
+CanPauseAndContinue : False
+
+<img width="1023" height="779" alt="image" src="https://github.com/user-attachments/assets/ea18a4b2-5c73-4443-9dd9-7d50e0e8b533" />
 
 4. Break / Fault Introduced
 
@@ -59,21 +75,32 @@ I stopped a service from running preventing its operations and operations of tho
 
 Command/action used:
 
-# Command used here
+Stop-Service Spooler
+
+<img width="1022" height="780" alt="image" src="https://github.com/user-attachments/assets/f387a623-2a9a-4c79-94ef-52f927c0d697" />
 
 Expected impact:
 
+By stopping this service i expected that the windows OS will be prevented from carrying out printer services
+
 5. Symptoms
 
-What stopped working?
+- Printer services stop running
+- OS unable to print
+- Service shows as stopped
 
 Error message:
 
-Paste error here
+<img width="1016" height="820" alt="image" src="https://github.com/user-attachments/assets/4d8b6bad-88c1-4401-be11-661c7835b65d" />
+
+<img width="1023" height="777" alt="image" src="https://github.com/user-attachments/assets/ca403ea5-f37f-429a-bb27-08753bf73ffa" />
+
+<img width="1023" height="817" alt="image" src="https://github.com/user-attachments/assets/3dd8bdc3-63a3-48f7-9308-7c38a61c3580" />
+
 
 Observed service status:
 
-Get-Service <ServiceName>
+
 
 Result:
 
@@ -94,9 +121,11 @@ Get-Service -DependentServices <ServiceName>
 Finding:
 
 Step 4 — Check Windows events
-Get-WinEvent -LogName System -MaxEvents 30
 
 Relevant event/error:
+
+<img width="1023" height="817" alt="image" src="https://github.com/user-attachments/assets/5440d623-f008-4a66-a9cf-47d71f2fdd37" />
+
 
 7. Root Cause
 
