@@ -3,8 +3,11 @@ Here i will be troubleshooting services through the windows VM!
 1. Lab Information
 
 Date: 07.09.26
+
 VM: Windows
+
 Windows Version: Windows 10 Pro
+
 Service: Printer Spooler
 
 2. Objective
@@ -16,9 +19,13 @@ To understand the service dependencies and troubleshoot the services that fail t
 3. Initial State
 
 Service name: Spooler
+
 Display name: Print Spooler
+
 Current status: Running
+
 Startup type: Manual
+
 Log On As: Local System
 
 Dependencies
